@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function RecipeCard({ recipe }) {
     return (
         <div className="card h-100">
@@ -8,6 +10,12 @@ function RecipeCard({ recipe }) {
             <div className="card-body">
                 <h4 className="card-title">{recipe.title}</h4>
                 <p className="card-text">{recipe.description}</p>
+                <Link
+                    to={`/recipes/${recipe.id}`}
+                    className="btn btn-primary"
+                >
+                    Leggi
+                </Link>
                 <p>
                     Autore: {recipe.author.name}
                 </p>
