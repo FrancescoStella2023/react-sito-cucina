@@ -7,18 +7,20 @@ function RecipeCard({ recipe }) {
                 src={`http://127.0.0.1:8000/storage/${recipe.image}`}
                 alt={recipe.title} />
 
-            <div className="card-body">
+            <div className="card-body d-flex flex-column">
                 <h4 className="card-title">{recipe.title}</h4>
-                <p className="card-text">{recipe.description}</p>
+                <p className="card-text">
+                    {recipe.description}
+                </p>
+                <p className='my-3'>
+                    <strong> Autore: <i>{recipe.author.name}</i> </strong>
+                </p>
                 <Link
                     to={`/recipes/${recipe.id}`}
-                    className="btn btn-primary"
+                    className="btn btn-primary mt-auto"
                 >
                     Leggi
                 </Link>
-                <p>
-                    Autore: {recipe.author.name}
-                </p>
             </div>
         </div>
     );

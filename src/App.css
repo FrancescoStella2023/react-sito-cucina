@@ -3,3 +3,8 @@
   height: 180px;
   object-fit: cover;
 }
+
+.footer {
+  height: 70px;
+  max-height: 70px;
+}
