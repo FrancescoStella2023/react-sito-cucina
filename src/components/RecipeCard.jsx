@@ -10,7 +10,7 @@ function RecipeCard({ recipe }) {
             <div className="card-body d-flex flex-column">
                 <h4 className="card-title">{recipe.title}</h4>
                 <p className="card-text">
-                    {recipe.description}
+                    {recipe.description.slice(0, 100) + '...'}
                 </p>
                 <p className='my-3'>
                     <strong> Autore: <i>{recipe.author.name}</i> </strong>

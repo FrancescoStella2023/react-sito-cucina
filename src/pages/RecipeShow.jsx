@@ -38,7 +38,9 @@ function RecipeShow() {
 
                     <div className="card-body">
                         <h1>{recipe.title}</h1>
-                        <p>{recipe.description}</p>
+                        <p style={{ whiteSpace: 'pre-line' }} className='text-start'>
+                            {recipe.description}
+                        </p>
                     </div>
                 </div>
                 <footer className='footer d-flex justify-content-center align-items-center mt-auto bg-dark text-white'>
